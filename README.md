@@ -8,7 +8,7 @@ Description of problem.
 
 -   None
 
-## Instructions
+## Setup
 
 1.  Fork and clone this repository.
 1.  Change into the new directory.
@@ -24,11 +24,11 @@ You may wish to refer to [FAQs](https://github.com/ga-wdi-boston/meta/wiki/)
 related to [forking,
 cloning](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone).
 
-## Requirements
+## Instructions -- Requirements
 
 Instructions here.
 
-## Bonus
+## Instructions -- Bonus
 
 Bonus challenge for those who finish early.
 
