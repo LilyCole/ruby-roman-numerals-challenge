@@ -78,7 +78,7 @@ RSpec.describe 'Challenge: ' do
         expect(to_roman(0)).to eq('')
       end
 
-      it 'returns nil for improper roman numerals and non-strings' do
+      it 'bonus: returns nil for improper roman numerals and non-strings' do
         ["", "IIII", "IM", "VL", 9, "9", nil].each do | bad_input |
           expect(to_arabic(bad_input)).to be_nil;
         end
