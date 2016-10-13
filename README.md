@@ -22,10 +22,6 @@ Starter code is available in the [`lib`](lib) directory.
 A pull request is not required,
 but it is necessary if you want a code review.
 
-You may wish to refer to [FAQs](https://github.com/ga-wdi-boston/meta/wiki/)
-related to [forking,
-cloning](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone).
-
 ## Instructions
 
 Please run the Rubocop linter (`rubocop lib`) frequently, since the linter will
