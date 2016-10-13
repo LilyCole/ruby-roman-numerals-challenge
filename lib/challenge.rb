@@ -1,7 +1,7 @@
 
 def to_roman(num)
   legend = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1].zip(
-    %w('M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'))
+           %w(M CM D CD C XC L XL X IX V IV I))
   ######  legend == [[1000, 'M'], [900, 'CM'], [500, 'D'], ...]
 
   # Input Validation
@@ -12,23 +12,24 @@ def to_roman(num)
   result = ''
   legend.each do |arabic, roman|
     while (num >= arabic)
-      result += roman
-      num -= arabic
+      result += roman                 # Build the roman string
+      num -= arabic                   # Decrement the num
     end
   end
   result
 end
 
 def to_arabic(numeral_string)
-  legend = %w('M', 'D', 'C', 'L', 'X', 'V', 'I').zip(
-    [1000, 500, 100, 50, 10, 5, 4, 1])
+  legend = %w(M D C L X V I).zip(
+    [1000, 500, 100, 50, 10, 5, 1])
   ######  legend = [['M', 1000], ['CM', 900], ['D', 500], ...]
   legend_hash = Hash[legend]
   ######  legend_hash = {'M' => 1000, 'CM' => 900, ...}
 
   # Input Validation
   return nil unless numeral_string.is_a? String # Not a string
-  return nil if numeral_string =~ /(
+  # Bonus
+  return nil if numeral_string =~ /( # Match operator & regex
     (.)\2{3}                # More than three of any character
     |[^MDCLXVI]                           # Illegal characters
     |I[^XVI]|V[^I]|X[^CLXVI]|L[^XVI]       # Illegal sequences
@@ -38,7 +39,8 @@ def to_arabic(numeral_string)
   # Solving
   nums = numeral_string.chars.map { |char| legend_hash[char] }
   nums.map.with_index do |num, i|
+    # subract when num's value is smaller than the following one
     num *= -1 if (i < nums.length - 1) && num < nums[i + 1]
     num
-  end.reduce(:+)
+  end.reduce(:+) # sum the nums
 end
