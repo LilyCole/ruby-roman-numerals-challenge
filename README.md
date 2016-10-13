@@ -1,14 +1,17 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# Roman Numerals
+# Roman Numerals (20m)
 
-Write a method that takes an Arabic Numeral (e.g. `23`) and returns a string
+Spec out a method, `to_roman` that takes an Arabic Numeral (e.g. `23`) and returns a string
 containing the corresponding [Roman Numeral](https://en.wikipedia.org/wiki/Roman_numerals)
 (in this case, `"XXIII"`).
 
+Do the same for a method, `to_arabic`, that does the reverse.
+
 ## Prerequisites
 
--   None
+-   Ruby
+-   TDD
 
 ## Setup
 
@@ -21,14 +24,6 @@ containing the corresponding [Roman Numeral](https://en.wikipedia.org/wiki/Roman
 Starter code is available in the [`lib`](lib) directory.
 A pull request is not required,
 but it is necessary if you want a code review.
-
-## Instructions
-
-Please run the Rubocop linter (`rubocop lib`) frequently, since the linter will
-make it easy to spot many common sources of errors.
-Once `rubocop` confirms that your syntax is right, you can use `rspec` to run
-the included tests, which will tell you whether or not your code
-meets the requirements.
 
 ### Step One
 
@@ -94,6 +89,7 @@ Numeral is structured properly:
 
 -   `I[^XVI]|V[^I]|X[^CLXVI]|L[^XVI]|C[^MDCLXVI]|D[^MCLXVI]|M[^MDCLXVI]` :
     contains incorrect sequences of characters (e.g. 'IVM', 'LC', etc)
+
 
 ## [License](LICENSE)
 
