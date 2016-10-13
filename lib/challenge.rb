@@ -12,8 +12,8 @@ def to_roman(num)
   result = ''
   legend.each do |arabic, roman|
     while (num >= arabic)
-      result += roman                 # Build the roman string
-      num -= arabic                   # Decrement the num
+      result += roman                 # Builds the numeral string
+      num -= arabic                   # Decrements the num
     end
   end
   result
@@ -39,8 +39,8 @@ def to_arabic(numeral_string)
   # Solving
   nums = numeral_string.chars.map { |char| legend_hash[char] }
   nums.map.with_index do |num, i|
-    # subract when num's value is smaller than the following one
+    # subracts when num's value is smaller than the following one
     num *= -1 if (i < nums.length - 1) && num < nums[i + 1]
     num
-  end.reduce(:+) # sum the nums
+  end.reduce(:+) # sums the nums
 end
